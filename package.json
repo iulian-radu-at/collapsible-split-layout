@@ -1,6 +1,6 @@
 {
-  "name": "collapsable-split-layout",
-  "version": "1.0.1",
+  "name": "collapsible-split-layout",
+  "version": "1.0.0",
   "description": "A React component to display a splitted layout were one of the sides can be collapsed/expanded without affecting the whole layout.",
   "main": "lib/index.js",
   "sideEffects": false,
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iulian-radu-at/collapsable-split-layout.git"
+    "url": "git+https://github.com/iulian-radu-at/collapsible-split-layout.git"
   },
   "files": [
     "lib",
@@ -26,10 +26,10 @@
     "layout",
     "split layout",
     "splitted layout",
-    "collapsable",
-    "collapsable layout",
-    "collapsable split layout",
-    "collapsable splitted layout",
+    "collapsible",
+    "collapsible layout",
+    "collapsible split layout",
+    "collapsible splitted layout",
     "react",
     "react-component",
     "ui"
@@ -37,9 +37,9 @@
   "author": "Iulian Radu <iulian.radu@gmx.at>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iulian-radu-at/collapsable-split-layout/issues"
+    "url": "https://github.com/iulian-radu-at/collapsible-split-layout/issues"
   },
-  "homepage": "https://github.com/iulian-radu-at/collapsable-split-layout#readme",
+  "homepage": "https://github.com/iulian-radu-at/collapsible-split-layout#readme",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",

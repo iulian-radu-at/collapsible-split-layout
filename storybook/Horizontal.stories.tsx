@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { CollapsableSplitLayoutHorizontal } from '../src/CollapsableSplitLayoutHorizontal';
+import { CollapsibleSplitLayoutHorizontal } from '../src/CollapsibleSplitLayoutHorizontal';
 import { FixView } from './FixView';
 import { FlexibleBox } from './FlexibleBox';
 
@@ -10,17 +10,17 @@ const style: React.CSSProperties = {
   textAlign: 'center',
 };
 
-const meta: Meta<typeof CollapsableSplitLayoutHorizontal> = {
-  title: 'CollapsableSplitLayoutHorizontal',
-  component: CollapsableSplitLayoutHorizontal,
-} as Meta<typeof CollapsableSplitLayoutHorizontal>;
+const meta: Meta<typeof CollapsibleSplitLayoutHorizontal> = {
+  title: 'CollapsibleSplitLayoutHorizontal',
+  component: CollapsibleSplitLayoutHorizontal,
+} as Meta<typeof CollapsibleSplitLayoutHorizontal>;
 export default meta;
-type Story = StoryObj<typeof CollapsableSplitLayoutHorizontal>;
+type Story = StoryObj<typeof CollapsibleSplitLayoutHorizontal>;
 
 export const Default = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
     />
   </div>
@@ -28,8 +28,8 @@ export const Default = () => (
 
 export const WithChildrenReversed = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
       isReversed={true}
     />
@@ -38,43 +38,43 @@ export const WithChildrenReversed = () => (
 
 export const WithGap = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
       gap={2}
     />
   </div>
 );
 
-export const WithMinimumCollapsableSize = () => (
+export const WithMinimumCollapsibleSize = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
-      minCollapsableSize={100}
+      minCollapsibleSize={100}
     />
   </div>
 );
 
-export const WithMaximumCollapsableSize = () => (
+export const WithMaximumCollapsibleSize = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
-      maxCollapsableSize={100}
+      maxCollapsibleSize={100}
     />
   </div>
 );
 
 export const WithAllPropsSet = () => (
   <div style={style}>
-    <CollapsableSplitLayoutHorizontal
-      childCollapsable={<FlexibleBox />}
+    <CollapsibleSplitLayoutHorizontal
+      childCollapsible={<FlexibleBox />}
       childView={<FixView />}
       isReversed={true}
       gap={2}
-      minCollapsableSize={50}
-      maxCollapsableSize={150}
+      minCollapsibleSize={50}
+      maxCollapsibleSize={150}
     />
   </div>
 );

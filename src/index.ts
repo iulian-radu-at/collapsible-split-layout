@@ -1,6 +1,6 @@
 export {
-  CollapsableSplitLayout,
-  CollapsableSplitLayout as default,
-} from './CollapsableSplitLayout';
-export { CollapsableSplitLayoutHorizontal } from './CollapsableSplitLayoutHorizontal';
-export { CollapsableSplitLayoutVertical } from './CollapsableSplitLayoutVertical';
+  CollapsibleSplitLayout,
+  CollapsibleSplitLayout as default,
+} from './CollapsibleSplitLayout';
+export { CollapsibleSplitLayoutHorizontal } from './CollapsibleSplitLayoutHorizontal';
+export { CollapsibleSplitLayoutVertical } from './CollapsibleSplitLayoutVertical';

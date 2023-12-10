@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
 export type SplitLayoutProps = {
-  childCollapsable: ReactNode;
+  childCollapsible: ReactNode;
   childView: ReactNode;
   gap?: number;
   isReversed?: boolean;
-  maxCollapsableSize?: number | string;
-  minCollapsableSize?: number | string;
+  maxCollapsibleSize?: number | string;
+  minCollapsibleSize?: number | string;
 };

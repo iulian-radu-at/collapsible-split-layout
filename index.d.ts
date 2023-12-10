@@ -1,36 +1,36 @@
 import * as React from 'react';
 
-export interface CollapsableSplitLayoutProps extends SplitLayoutProps {
+export interface CollapsibleSplitLayoutProps extends SplitLayoutProps {
   isVertical?: boolean;
 }
 
 export interface SplitLayoutProps {
-  childCollapsable: React.ReactNode;
+  childCollapsible: React.ReactNode;
   childView: React.ReactNode;
   gap?: number;
   isReversed?: boolean;
   /* Please use only numbers or vw,vh values */
-  maxCollapsableSize?: number | string;
-  minCollapsableSize?: number | string;
+  maxCollapsibleSize?: number | string;
+  minCollapsibleSize?: number | string;
 }
 
-declare function CollapsableSplitLayout(
-  props: CollapsableSplitLayoutProps
+declare function CollapsibleSplitLayout(
+  props: CollapsibleSplitLayoutProps
 ): React.ReactNode;
 
-declare function CollapsableSplitLayoutHorizontal(
-  props: CollapsableSplitLayoutProps
+declare function CollapsibleSplitLayoutHorizontal(
+  props: CollapsibleSplitLayoutProps
 ): React.ReactNode;
 
-declare function CollapsableSplitLayoutVertical(
-  props: CollapsableSplitLayoutProps
+declare function CollapsibleSplitLayoutVertical(
+  props: CollapsibleSplitLayoutProps
 ): React.ReactNode;
 
-declare module 'collapsable-split-layout' {}
+declare module 'Collapsible-split-layout' {}
 
-export default CollapsableSplitLayout;
+export default CollapsibleSplitLayout;
 export {
-  CollapsableSplitLayout,
-  CollapsableSplitLayoutHorizontal,
-  CollapsableSplitLayoutVertical,
+  CollapsibleSplitLayout,
+  CollapsibleSplitLayoutHorizontal,
+  CollapsibleSplitLayoutVertical,
 };

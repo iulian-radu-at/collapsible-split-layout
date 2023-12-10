@@ -1,10 +1,10 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import { SxProps, Theme } from '@mui/material/styles';
-import * as React from 'react';
 import { SplitLayoutProps } from './SplitLayout.types';
 
 const sx: Record<string, SxProps<Theme>> = {
-  collapsable: {
+  Collapsible: {
     overflow: 'auto',
     flexShrink: 0,
   },
@@ -21,24 +21,24 @@ const sx: Record<string, SxProps<Theme>> = {
   },
 };
 
-export function CollapsableSplitLayoutHorizontal({
-  childCollapsable,
+export function CollapsibleSplitLayoutHorizontal({
+  childCollapsible,
   childView,
   isReversed,
   gap,
-  maxCollapsableSize,
-  minCollapsableSize,
+  maxCollapsibleSize,
+  minCollapsibleSize,
 }: SplitLayoutProps) {
-  const childLeft = isReversed ? childView : childCollapsable;
-  const childRight = isReversed ? childCollapsable : childView;
+  const childLeft = isReversed ? childView : childCollapsible;
+  const childRight = isReversed ? childCollapsible : childView;
 
-  const sxCollapsable = {
-    ...sx.collapsable,
-    maxWidth: maxCollapsableSize,
-    minWidth: minCollapsableSize,
+  const sxCollapsible = {
+    ...sx.Collapsible,
+    maxWidth: maxCollapsibleSize,
+    minWidth: minCollapsibleSize,
   };
-  const sxLeft = isReversed ? sx.visible : sxCollapsable;
-  const sxRight = isReversed ? sxCollapsable : sx.visible;
+  const sxLeft = isReversed ? sx.visible : sxCollapsible;
+  const sxRight = isReversed ? sxCollapsible : sx.visible;
 
   return (
     <Box gap={gap} sx={sx.root}>
