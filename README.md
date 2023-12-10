@@ -101,3 +101,7 @@ export default App;
 ### 1.0.0
 
 - collapsable-split-layout is made publicly available
+
+### 1.0.1
+
+- Updated packages

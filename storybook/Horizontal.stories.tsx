@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory, storiesOf } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { CollapsableSplitLayoutHorizontal } from '../src/CollapsableSplitLayoutHorizontal';
 import { FixView } from './FixView';
@@ -10,24 +10,23 @@ const style: React.CSSProperties = {
   textAlign: 'center',
 };
 
-export default {
+const meta: Meta<typeof CollapsableSplitLayoutHorizontal> = {
   title: 'CollapsableSplitLayoutHorizontal',
   component: CollapsableSplitLayoutHorizontal,
-} as ComponentMeta<typeof CollapsableSplitLayoutHorizontal>;
+} as Meta<typeof CollapsableSplitLayoutHorizontal>;
+export default meta;
+type Story = StoryObj<typeof CollapsableSplitLayoutHorizontal>;
 
-export const Default: ComponentStory<typeof CollapsableSplitLayoutHorizontal> =
-  () => (
-    <div style={style}>
-      <CollapsableSplitLayoutHorizontal
-        childCollapsable={<FlexibleBox />}
-        childView={<FixView />}
-      />
-    </div>
-  );
+export const Default = () => (
+  <div style={style}>
+    <CollapsableSplitLayoutHorizontal
+      childCollapsable={<FlexibleBox />}
+      childView={<FixView />}
+    />
+  </div>
+);
 
-export const WithChildrenReversed: ComponentStory<
-  typeof CollapsableSplitLayoutHorizontal
-> = () => (
+export const WithChildrenReversed = () => (
   <div style={style}>
     <CollapsableSplitLayoutHorizontal
       childCollapsable={<FlexibleBox />}
@@ -37,20 +36,17 @@ export const WithChildrenReversed: ComponentStory<
   </div>
 );
 
-export const WithGap: ComponentStory<typeof CollapsableSplitLayoutHorizontal> =
-  () => (
-    <div style={style}>
-      <CollapsableSplitLayoutHorizontal
-        childCollapsable={<FlexibleBox />}
-        childView={<FixView />}
-        gap={2}
-      />
-    </div>
-  );
+export const WithGap = () => (
+  <div style={style}>
+    <CollapsableSplitLayoutHorizontal
+      childCollapsable={<FlexibleBox />}
+      childView={<FixView />}
+      gap={2}
+    />
+  </div>
+);
 
-export const WithMinimumCollapsableSize: ComponentStory<
-  typeof CollapsableSplitLayoutHorizontal
-> = () => (
+export const WithMinimumCollapsableSize = () => (
   <div style={style}>
     <CollapsableSplitLayoutHorizontal
       childCollapsable={<FlexibleBox />}
@@ -60,9 +56,7 @@ export const WithMinimumCollapsableSize: ComponentStory<
   </div>
 );
 
-export const WithMaximumCollapsableSize: ComponentStory<
-  typeof CollapsableSplitLayoutHorizontal
-> = () => (
+export const WithMaximumCollapsableSize = () => (
   <div style={style}>
     <CollapsableSplitLayoutHorizontal
       childCollapsable={<FlexibleBox />}
@@ -72,9 +66,7 @@ export const WithMaximumCollapsableSize: ComponentStory<
   </div>
 );
 
-export const WithAllPropsSet: ComponentStory<
-  typeof CollapsableSplitLayoutHorizontal
-> = () => (
+export const WithAllPropsSet = () => (
   <div style={style}>
     <CollapsableSplitLayoutHorizontal
       childCollapsable={<FlexibleBox />}

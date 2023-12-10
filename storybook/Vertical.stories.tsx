@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory, storiesOf } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { CollapsableSplitLayoutVertical } from '../src/CollapsableSplitLayoutVertical';
 import { FixView } from './FixView';
@@ -10,24 +10,23 @@ const style: React.CSSProperties = {
   textAlign: 'center',
 };
 
-export default {
+const meta: Meta<typeof CollapsableSplitLayoutVertical> = {
   title: 'CollapsableSplitLayoutVertical',
   component: CollapsableSplitLayoutVertical,
-} as ComponentMeta<typeof CollapsableSplitLayoutVertical>;
+} as Meta<typeof CollapsableSplitLayoutVertical>;
+export default meta;
+type Story = StoryObj<typeof CollapsableSplitLayoutVertical>;
 
-export const Default: ComponentStory<typeof CollapsableSplitLayoutVertical> =
-  () => (
-    <div style={style}>
-      <CollapsableSplitLayoutVertical
-        childCollapsable={<FlexibleBox isVertical={true} />}
-        childView={<FixView />}
-      />
-    </div>
-  );
+export const Default = () => (
+  <div style={style}>
+    <CollapsableSplitLayoutVertical
+      childCollapsable={<FlexibleBox isVertical={true} />}
+      childView={<FixView />}
+    />
+  </div>
+);
 
-export const WithChildrenReversed: ComponentStory<
-  typeof CollapsableSplitLayoutVertical
-> = () => (
+export const WithChildrenReversed = () => (
   <div style={style}>
     <CollapsableSplitLayoutVertical
       childCollapsable={<FlexibleBox isVertical={true} />}
@@ -37,20 +36,17 @@ export const WithChildrenReversed: ComponentStory<
   </div>
 );
 
-export const WithGap: ComponentStory<typeof CollapsableSplitLayoutVertical> =
-  () => (
-    <div style={style}>
-      <CollapsableSplitLayoutVertical
-        childCollapsable={<FlexibleBox isVertical={true} />}
-        childView={<FixView />}
-        gap={2}
-      />
-    </div>
-  );
+export const WithGap = () => (
+  <div style={style}>
+    <CollapsableSplitLayoutVertical
+      childCollapsable={<FlexibleBox isVertical={true} />}
+      childView={<FixView />}
+      gap={2}
+    />
+  </div>
+);
 
-export const WithMinimumCollapsableSize: ComponentStory<
-  typeof CollapsableSplitLayoutVertical
-> = () => (
+export const WithMinimumCollapsableSize = () => (
   <div style={style}>
     <CollapsableSplitLayoutVertical
       childCollapsable={<FlexibleBox isVertical={true} />}
@@ -60,9 +56,7 @@ export const WithMinimumCollapsableSize: ComponentStory<
   </div>
 );
 
-export const WithMaximumCollapsableSize: ComponentStory<
-  typeof CollapsableSplitLayoutVertical
-> = () => (
+export const WithMaximumCollapsableSize = () => (
   <div style={style}>
     <CollapsableSplitLayoutVertical
       childCollapsable={<FlexibleBox isVertical={true} />}
@@ -72,9 +66,7 @@ export const WithMaximumCollapsableSize: ComponentStory<
   </div>
 );
 
-export const WithAllPropsSet: ComponentStory<
-  typeof CollapsableSplitLayoutVertical
-> = () => (
+export const WithAllPropsSet = () => (
   <div style={style}>
     <CollapsableSplitLayoutVertical
       childCollapsable={<FlexibleBox isVertical={true} />}
