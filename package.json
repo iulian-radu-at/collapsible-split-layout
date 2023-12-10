@@ -1,6 +1,6 @@
 {
   "name": "collapsible-split-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component to display a splitted layout were one of the sides can be collapsed/expanded without affecting the whole layout.",
   "main": "lib/index.js",
   "sideEffects": false,
